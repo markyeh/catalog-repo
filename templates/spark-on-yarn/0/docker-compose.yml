@@ -3,7 +3,7 @@ spark-on-yarn:
     volumes:
         - /data/hdfs:/home/hadoop/hadoop/tmp
         - /var/lib/nvidia-docker/volumes/nvidia_driver/361.45.18:/usr/local/nvidia:ro
-    priviledged: true
+    privileged: true
     labels:
         io.rancher.container.pull_image:always
         io.rancher.scheduler.global:true
