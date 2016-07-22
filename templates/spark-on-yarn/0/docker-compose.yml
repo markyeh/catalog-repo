@@ -1,9 +1,12 @@
 spark-on-yarn:
   environment:
-    TEST_ENV1: bigdata
-    TEST_ENV2: ${WORKER_NUM} 
-    TEST_ENV3: ${uuid}
-    TEST_ENV4: spark-on-yarn-uuid
+    RANCHER_UUID: spark-on-yarn-v000
+    RANCHER_ENDPOINT: ${RANCHER_ENDPOINT}
+    FXN_YARN_NM_CPU_VCORES: ${FXN_YARN_NM_CPU_VCORES}
+    FXN_YARN_NM_MEMORY_MB: ${FXN_YARN_NM_MEMORY_MB}
+    FXN_YARN_SCH_MIN_MB: ${FXN_YARN_SCH_MIN_MB}
+    FXN_YARN_SCH_MAX_MB: ${FXN_YARN_SCH_MAX_MB}
+    FXN_HDFS_REPLICA: ${FXN_HDFS_REPLICA}
   net: "host"
   labels:
     io.rancher.scheduler.global: 'true'
