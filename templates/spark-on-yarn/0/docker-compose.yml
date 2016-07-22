@@ -2,9 +2,8 @@ spark-on-yarn:
   environment:
     TEST_ENV1: bigdata
     TEST_ENV2: ${WORKER_NUM} 
-    TEST_ENV3: ${environment_name}
-    TEST_ENV4: $${stack_name}
-    TEST_ENV5: ${stack_name}
+    TEST_ENV3: ${uuid}
+    TEST_ENV4: spark-on-yarn-uuid
   net: "host"
   labels:
     io.rancher.scheduler.global: 'true'
