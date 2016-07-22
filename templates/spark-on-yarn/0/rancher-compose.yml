@@ -1,0 +1,16 @@
+.catalog:
+  name: "Foxconn Spark-on-Yarn"
+  version: v0.0.0
+  description: |
+    (Experimental) Spark cluster including Yarn and HDFS.
+  minimum_rancher_version: v0.56.0
+  uuid: spark-on-yarn-0
+  questions:
+    - variable: "host_count"
+      description: "Number of cluster nodes"
+      label: "Host Count:"
+      required: true
+      default: 2
+      type: "int"
+spark-on-yarn:
+  scale: ${host_count} 

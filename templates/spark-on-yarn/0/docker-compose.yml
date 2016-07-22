@@ -1,0 +1,10 @@
+spark-on-yarn:
+    net: "host"
+    volumes:
+        - /data/hdfs:/home/hadoop/hadoop/tmp
+        - /var/lib/nvidia-docker/volumes/nvidia_driver/361.45.18:/usr/local/nvidia:ro
+    priviledged: true
+    labels:
+        io.rancher.container.pull_image:always
+        io.rancher.scheduler.global: 'true'
+    image: markyeh/spark-on-yarn:v0.0.0
