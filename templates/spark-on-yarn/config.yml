@@ -1,5 +1,5 @@
-name: Spark-on-Yarn
+name: Spark on Yarn
 description: |
   FOXCONN Spark cluster including Yarn and HDFS.
-version: Spark-on-Yarn V0.0.0
+version: Spark on Yarn V0.0.0
 category: deeplearning
