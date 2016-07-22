@@ -1,9 +1,12 @@
 spark-on-yarn:
-    net: "host"
-    volumes:
-        - /data/hdfs:/home/hadoop/hadoop/tmp
-        - /var/lib/nvidia-docker/volumes/nvidia_driver/361.45.18:/usr/local/nvidia:ro
-    privileged: true
-    labels:
-        io.rancher.scheduler.global: 'true'
-    image: markyeh/spark-on-yarn:v0.0.0
+  environment:
+    TEST_ENV1: bigdata
+    TEST_ENV2: ${WORKER_NUM} 
+  net: "host"
+  labels:
+    io.rancher.scheduler.global: 'true'
+  image: markyeh/spark-on-yarn:v0.0.0
+  volumes:
+  - /data/hdfs:/home/hadoop/hadoop/tmp
+  - /var/lib/nvidia-docker/volumes/nvidia_driver/361.45.18:/usr/local/nvidia:ro
+  privileged: true
