@@ -1,2 +1,2 @@
-# spark
-rancher spark catalog
+# Spark
+Rancher spark catalog
